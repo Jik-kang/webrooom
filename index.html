@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="icon.png" type="image/x-icon">
+    <link href="https://jsdelivr.net" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
@@ -20,8 +21,7 @@
         </div>
     </header>
 
-    <section>
-        <nav class="navbar navbar-dark navbar-transparent">
+    <nav class="navbar navbar-dark navbar-transparent">
         <div class="container-fluid">
             <a class="navbar-brand fw-bold" href="index.html">⛺ 5 Southern Trails</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar"
@@ -35,7 +35,7 @@
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#form-section">Form</a>
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#campFormModal">Form</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="pattani.html">ปัตตานี (Pattani)</a>
@@ -55,10 +55,60 @@
             </ul>
         </div>
     </nav>
-    </section>
-    
-    <footer>
-        <p>5 Southern Trails © 2026 | 6720310024 @ Arina Radaeng</p>
+
+    <div class="modal fade" id="campFormModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">⛺ แนะนำสถานที่แคมป์ปิ้ง</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" </button>
+                </div>
+                <div class="modal-body">
+                    <form id="popupCampForm"
+                        onsubmit="alert('ส่งข้อมูลเรียบร้อยแล้วครับ!'); this.reset();  return false;">
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">ชื่อสถานที่ *</label>
+                            <input type="text" class="form-control" placeholder="เช่น ทะเลหมอกอัยเยอร์เวง" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">จังหวัด *</label>
+                            <select class="form-select" required>
+                                <option value="">-- เลือกจังหวัด --</option>
+                                <option value="ปัตตานี">ปัตตานี</option>
+                                <option value="ยะลา">ยะลา</option>
+                                <option value="นราธิวาส">นราธิวาส</option>
+                                <option value="สงขลา">สงขลา</option>
+                                <option value="สตูล">สตูล</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">ลิงก์เพจหรือแผนที่</label>
+                            <input type="url" class="form-control" placeholder="https://...">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">รายละเอียดเพิ่มเติม</label>
+                            <textarea class="form-control" rows="3"
+                                placeholder="บรรยากาศ ค่าบริการ หรือสิ่งอำนวยความสะดวก..."></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="imageUpload" class="form-label fw-semibold">แนบรูปภาพ</label>
+                            <input class="form-control" type="file" id="imageUpload" name="image" accept="image/*">
+                        </div>
+                        <button type="submit" class="btn btn-outline-info">อัพโหลด</button>
+                        <div class="text-end">
+                            <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">ยกเลิก</button>
+                            <button type="submit" class="btn btn-success">บันทึกข้อมูล</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-gray text-center py-3 mt-auto">
+        <div class="container">
+            <p>5 Southern Trails © 2026 | 6720310024 @ Arina Radaeng</p>
+        </div>
     </footer>
 </body>
 
