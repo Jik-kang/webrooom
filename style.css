@@ -70,8 +70,41 @@ body {
 
 footer {
   margin-top: auto;
-  /* padding: 10px;
+}
+
+.place-title {
+  margin-top: 25%;
+  color: #ffffff;
+  font-family: Geneva;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
+}
+
+.place-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.place-img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.modal-header h4 {
   text-align: center;
-  color: gray;
-  margin-top: 13%; */
+  align-items: center;
+}
+
+.modal-lg {
+  width: 55%;
+}
+
+td {
+  font-family: "Sarabun", sans-serif;
 }
